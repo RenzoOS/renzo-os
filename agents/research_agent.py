@@ -41,10 +41,11 @@ def _scrape(url: str) -> str:
 
 
 def _search_ddg(query: str, max_results: int = 5) -> list[dict]:
-    headers = {"User-Agent": "Mozilla/5.0 (compatible; RenzoOS/1.0)"}
+    headers = {"User-Agent": "Mozilla/5.0 (compatible; RenzoOS/1.0; +https://github.com/RenzoOS/renzo-os)"}
     data = {"q": query, "b": ""}
     try:
-        resp = httpx.post(SEARCH_URL, data=data, headers=headers, timeout=10)
+        resp = httpx.post(SEARCH_URL, data=data, headers=headers, timeout=15)
+        resp.raise_for_status()
         soup = BeautifulSoup(resp.text, "html.parser")
         results = []
         for link in soup.select(".result__title a")[:max_results]:
