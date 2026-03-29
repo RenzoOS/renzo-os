@@ -22,7 +22,11 @@ def _rpc(method: str, params: list) -> dict:
         "jsonrpc": "2.0", "id": 1,
         "method": method, "params": params
     }, timeout=15)
-    return resp.json()
+    resp.raise_for_status()
+    data = resp.json()
+    if "error" in data:
+        raise ValueError(f"RPC error: {data['error']}")
+    return data
 
 
 def get_sol_balance(wallet: str) -> float:
