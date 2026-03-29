@@ -136,15 +136,23 @@ renzo-os/
 
 ## Roadmap
 
+### v1.0.0 (current)
 - [x] Chat Agent — Claude-powered persistent assistant
 - [x] Onchain Agent — Solana wallet monitor
 - [x] Social Agent — Twitter/X automation
 - [x] Research Agent — Web scraper + AI summarizer
+- [x] Unified CLI with interactive menu
+- [x] GitHub Actions CI
+
+### v1.1.0 (next)
 - [ ] Agent memory persistence (SQLite)
 - [ ] Multi-agent orchestration (agents talking to each other)
-- [ ] Telegram interface
+- [ ] Telegram bot interface
+
+### v2.0.0 (future)
 - [ ] Discord integration
 - [ ] On-chain data feed from $RNZO token activity
+- [ ] Web dashboard UI
 
 ---
 
