@@ -1,0 +1,10 @@
+anthropic>=0.40.0
+click>=8.1.7
+python-dotenv>=1.0.0
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+tweepy>=4.14.0
+solana>=0.34.0
+solders>=0.21.0
+rich>=13.7.0
+httpx>=0.27.0
